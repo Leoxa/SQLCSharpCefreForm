@@ -60,5 +60,16 @@ namespace Cefre
 
 
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (listFozde.SelectedIndex != -1)
+            {
+                MessageBox.Show("Vállaszon ki egy elemet");
+                return;
+            }
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"DELETE FROM fozde WHERE id = @id;";
+        }
     }
 }
