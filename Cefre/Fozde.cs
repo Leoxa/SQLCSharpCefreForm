@@ -25,5 +25,10 @@ namespace Cefre
         public string Nev { get => nev; set => nev = value; }
         public string Tulajdonos { get => tulajdonos; set => tulajdonos = value; }
         public DateTime Alapitva { get => alapitva; set => alapitva = value; }
+
+        public override string ToString()
+        {
+            return nev;
+        }
     }
 }

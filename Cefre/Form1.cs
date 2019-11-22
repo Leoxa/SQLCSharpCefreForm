@@ -29,14 +29,19 @@ namespace Cefre
         {
             listFozde.Items.Clear();
             var command = conn.CreateCommand();
-            command.CommandText = @"SELECT nev FROM fozde ORDER BY nev";
+            command.CommandText = @"SELECT id,nev,tulajdonos,alapitas FROM fozde ORDER BY nev";
             using (var reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
+                    var id = reader.GetInt32("id");
                     var nev = reader.GetString("nev");
+                    var tulaj = reader.GetString("tulajdonos");
+                    var alapitas = reader.GetDateTime("alapitas");
 
-                    listFozde.Items.Clear();
+                    var fozde = new Fozde(id, nev, tulaj, alapitas);
+
+                    listFozde.Items.Add(fozde);
                 }
             }
         }
@@ -69,7 +74,16 @@ namespace Cefre
                 return;
             }
             var cmd = conn.CreateCommand();
+
             cmd.CommandText = @"DELETE FROM fozde WHERE id = @id;";
+
+            var fozde = (Fozde)listFozde.SelectedItems;
+
+            cmd.Parameters.AddWithValue("@id", fozde.id);
+
+            cmd.ExecuteNonQuery();
+
+            Adatoklistazas();
         }
     }
 }
