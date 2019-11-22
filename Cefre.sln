@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cefre", "Cefre\Cefre.csproj", "{ACBD3595-C3C9-4FAA-9A83-42350DD9B9D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACBD3595-C3C9-4FAA-9A83-42350DD9B9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBD3595-C3C9-4FAA-9A83-42350DD9B9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBD3595-C3C9-4FAA-9A83-42350DD9B9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBD3595-C3C9-4FAA-9A83-42350DD9B9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FEE8E03-FF2B-4EE4-AF4E-569069635567}
+	EndGlobalSection
+EndGlobal
